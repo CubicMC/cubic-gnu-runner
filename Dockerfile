@@ -37,4 +37,4 @@ RUN cd /tmp \
     && make -j4 \
     && make install
 
-RUN rm -rf /tmp/gcc-${VERSION}.tar.xz /tmp/gcc-${VERSION} /tmp/gcc-build
+RUN rm -rf /tmp/gcc-${GCC_VERSION}.tar.xz /tmp/gcc-${GCC_VERSION} /tmp/gcc-build
