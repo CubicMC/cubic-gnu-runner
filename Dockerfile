@@ -34,7 +34,7 @@ RUN cd /tmp \
     --enable-__cxa_atexit                            \
     --enable-clocale=gnu                             \
     --enable-languages=all                           \
-    && make -j4 \
+    && make \
     && make install
 
 RUN rm -rf /tmp/gcc-${GCC_VERSION}.tar.xz /tmp/gcc-${GCC_VERSION} /tmp/gcc-build
