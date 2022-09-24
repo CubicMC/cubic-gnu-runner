@@ -39,3 +39,9 @@ RUN cd /tmp \
     && rm -rf /tmp/gcc-${GCC_VERSION}.tar.xz \
     /tmp/gcc-${GCC_VERSION} \
     /tmp/gcc-build
+
+RUN echo $'/plaform/lib\n\
+    /platform/lib32\n\
+    /platform/lib64\n' > /etc/ld.so.conf.d/gcc12.conf
+
+RUN ldconfig -v
