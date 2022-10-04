@@ -13,6 +13,8 @@ RUN apt install -y cmake
 
 RUN apt install -y pkg-config
 
+RUN apt install -y gtkmm-3.0
+
 # Install gcc-12 (Pain)
 
 ENV GCC_VERSION "12.2.0"
