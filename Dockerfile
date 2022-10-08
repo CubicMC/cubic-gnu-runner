@@ -15,7 +15,7 @@ RUN apt install -y cmake
 
 RUN apt install -y pkg-config
 
-RUN apt install -y gtkmm-3.0
+RUN apt-get install -y gtkmm-3.0
 
 # Install gcc-12 (Pain)
 
