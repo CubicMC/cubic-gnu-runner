@@ -47,3 +47,15 @@ RUN echo $'/plaform/lib\n\
     /platform/lib64\n' > /etc/ld.so.conf.d/gcc12.conf
 
 RUN ldconfig -v
+
+RUN cd /tmp && \
+    wget https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.7.tar.xz && \
+    tar -xf gtkmm-3.24.7.tar.xz
+
+RUN cd /tmp && \
+    cd gtkmm-3.24.7 && \
+    mkdir gtkmm3-build && \
+    cd gtkmm3-build && \
+    meson --prefix=/usr --buildtype=release .. && \
+    ninja && \
+    ninja install
