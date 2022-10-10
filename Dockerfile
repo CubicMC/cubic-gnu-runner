@@ -48,6 +48,8 @@ RUN echo $'/plaform/lib\n\
 
 RUN ldconfig -v
 
+RUN apt install -y meson ninja-build
+
 RUN cd /tmp && \
     wget https://download.gnome.org/sources/gtkmm/3.24/gtkmm-3.24.7.tar.xz && \
     tar -xf gtkmm-3.24.7.tar.xz
