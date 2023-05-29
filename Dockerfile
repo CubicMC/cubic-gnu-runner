@@ -15,7 +15,8 @@ RUN dnf install -y \
   curl \
   python3 \
   zlib-devel \
-  zlib-static
+  zlib-static \
+  openjdk-11-jdk
 
 ARG user=jenkins
 ARG group=jenkins
