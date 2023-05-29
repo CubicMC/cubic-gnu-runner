@@ -16,7 +16,8 @@ RUN dnf install -y \
   python3 \
   zlib-devel \
   zlib-static \
-  java-11-openjdk
+  java-11-openjdk \
+  boost-devel
 
 ARG user=jenkins
 ARG group=jenkins
