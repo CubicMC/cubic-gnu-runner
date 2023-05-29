@@ -1,8 +1,21 @@
-FROM ubuntu:22.04
+FROM fedora:38
 
-RUN apt update
-
-RUN apt install -y gcc-12 g++-12 cmake pkg-config libgtkmm-3.0-dev openjdk-11-jdk git libcurl4-openssl-dev curl wget python3-venv libboost-all-dev
+RUN dnf install -y \
+  gcc \
+  gcc-c++ \
+  libstdc++-devel \
+  libstdc++-static \
+  glibc-static \
+  cmake \
+  make \
+  pkgconf \
+  git \
+  libcurl-devel \
+  wget \
+  curl \
+  python3 \
+  zlib-devel \
+  zlib-static
 
 ARG user=jenkins
 ARG group=jenkins
