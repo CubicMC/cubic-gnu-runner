@@ -1,21 +1,16 @@
-FROM fedora:38
+FROM fedora:39
 
 RUN dnf install -y \
-  gcc \
-  gcc-c++ \
+  clang \
   libstdc++-devel \
-  libstdc++-static \
-  glibc-static \
   cmake \
   make \
   pkgconf \
   git \
   libcurl-devel \
-  wget \
   curl \
   python3 \
   zlib-devel \
-  zlib-static \
   java-11-openjdk \
   boost-devel
 
