@@ -4,6 +4,7 @@ RUN dnf install -y \
   clang \
   libstdc++-devel \
   cmake \
+  ccache \
   make \
   pkgconf \
   git \
